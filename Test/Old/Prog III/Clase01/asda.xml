@@ -1,0 +1,319 @@
+<ns0:warehousingOutboundInstructionMessage xmlns:ns0="urn:gs1:ecom:warehousing_outbound_instruction:xsd:3">
+	<ns1:StandardBusinessDocumentHeader xmlns:ns1="http://www.unece.org/cefact/namespaces/StandardBusinessDocumentHeader">
+		<ns1:HeaderVersion>1.0</ns1:HeaderVersion>
+		<ns1:Sender>
+			<ns1:Identifier Authority="GS1">8713386704906</ns1:Identifier>
+			<ns1:ContactInformation>
+				<ns1:Contact>PHILIPS</ns1:Contact>
+				<ns1:EmailAddress>DL_EAI_SAPPO_Support_Temp@philips.com</ns1:EmailAddress>
+				<ns1:TelephoneNumber>+3161334567</ns1:TelephoneNumber>
+				<ns1:ContactTypeIdentifier>Manufacturer</ns1:ContactTypeIdentifier>
+			</ns1:ContactInformation>
+		</ns1:Sender>
+		<ns1:Receiver>
+			<ns1:Identifier Authority="GS1">8713381403729</ns1:Identifier>
+			<ns1:ContactInformation>
+				<ns1:Contact>Exologistica</ns1:Contact>
+				<ns1:EmailAddress>cserra@exologistica.com</ns1:EmailAddress>
+				<ns1:TelephoneNumber>(54 11) 6739 7974</ns1:TelephoneNumber>
+				<ns1:ContactTypeIdentifier>LogisticServiceProvider</ns1:ContactTypeIdentifier>
+			</ns1:ContactInformation>
+		</ns1:Receiver>
+		<ns1:DocumentIdentification>
+			<ns1:Standard>GS1</ns1:Standard>
+			<ns1:TypeVersion>3.4.1</ns1:TypeVersion>
+			<ns1:InstanceIdentifier>288d4d92099311ee9648000031d32fef</ns1:InstanceIdentifier>
+			<ns1:Type>WarehousingOutboundInstruction</ns1:Type>
+			<ns1:MultipleType>false</ns1:MultipleType>
+			<ns1:CreationDateAndTime>2023-06-13T04:36:51.000-02:00</ns1:CreationDateAndTime>
+		</ns1:DocumentIdentification>
+		<ns1:BusinessScope>
+			<ns1:Scope>
+				<ns1:Type>SCHEMA_GUIDE</ns1:Type>
+				<ns1:InstanceIdentifier>0320761316</ns1:InstanceIdentifier>
+				<ns1:Identifier>OutboundDelivery</ns1:Identifier>
+			</ns1:Scope>
+		</ns1:BusinessScope>
+	</ns1:StandardBusinessDocumentHeader>
+	<warehousingOutboundInstruction>
+		<creationDateTime>2023-06-13T04:36:51.000-02:00</creationDateTime>
+		<documentStatusCode>ORIGINAL</documentStatusCode>
+		<documentActionCode>ADD</documentActionCode>
+		<warehousingOutboundInstructionIdentification>
+			<entityIdentification>IDOC0000000851786094</entityIdentification>
+			<contentOwner>
+				<gln>8713386704906</gln>
+			</contentOwner>
+		</warehousingOutboundInstructionIdentification>
+		<logisticServicesBuyer>
+			<gln>8713386704906</gln>
+			<additionalPartyIdentification additionalPartyIdentificationTypeCode="FOR_INTERNAL_USE_1">31</additionalPartyIdentification>
+			<additionalPartyIdentification additionalPartyIdentificationTypeCode="FOR_INTERNAL_USE_2">YLF</additionalPartyIdentification>
+			<address>
+				<name>PHILIPS</name>
+			</address>
+		</logisticServicesBuyer>
+		<logisticServicesSeller>
+			<gln>8713381403729</gln>
+			<address>
+				<name>Exologistica</name>
+			</address>
+		</logisticServicesSeller>
+		<warehousingOutboundInstructionShipment>
+			<shipper>
+				<gln>8713381403729</gln>
+				<address>
+					<name>Exologistica</name>
+				</address>
+				<contact>
+					<communicationChannel>
+						<communicationChannelCode>TELEPHONE</communicationChannelCode>
+						<communicationValue>(54 11) 6739 7974</communicationValue>
+					</communicationChannel>
+					<communicationChannel>
+						<communicationChannelCode>EMAIL</communicationChannelCode>
+						<communicationValue>cserra@exologistica.com</communicationValue>
+					</communicationChannel>
+				</contact>
+			</shipper>
+			<receiver>
+				<gln>9999999999999</gln>
+				<additionalPartyIdentification additionalPartyIdentificationTypeCode="SELLER_ASSIGNED_IDENTIFIER_FOR_A_PARTY">0100762749</additionalPartyIdentification>
+				<address>
+					<city>Rafaela</city>
+					<countryCode>AR</countryCode>
+					<languageOfThePartyCode>es</languageOfThePartyCode>
+					<name>Cortassa S.A. </name>
+					<postalCode>2300</postalCode>
+					<state>12</state>
+					<streetAddressOne>Suipacha 887</streetAddressOne>
+				</address>
+				<contact>
+					<communicationChannel>
+						<communicationChannelCode>TELEPHONE</communicationChannelCode>
+						<communicationValue>505700-03492</communicationValue>
+					</communicationChannel>
+				</contact>
+				<organisationDetails>
+					<organisationName>Cortassa S.A.</organisationName>
+					<officialAddress/>
+				</organisationDetails>
+			</receiver>
+			<buyer>
+				<gln>9999999999999</gln>
+				<additionalPartyIdentification additionalPartyIdentificationTypeCode="SELLER_ASSIGNED_IDENTIFIER_FOR_A_PARTY">0100762749</additionalPartyIdentification>
+				<address>
+					<city>Rafaela</city>
+					<countryCode>AR</countryCode>
+					<languageOfThePartyCode>es</languageOfThePartyCode>
+					<name>Cortassa S.A. </name>
+					<postalCode>2300</postalCode>
+					<state>12</state>
+					<streetAddressOne>Suipacha 887</streetAddressOne>
+				</address>
+				<contact>
+					<communicationChannel>
+						<communicationChannelCode>TELEPHONE</communicationChannelCode>
+						<communicationValue>505700-03492</communicationValue>
+					</communicationChannel>
+				</contact>
+				<dutyFeeTaxRegistration>
+					<dutyFeeTaxRegistrationID identificationSchemeAgencyCode="TaxNumber1" identificationSchemeAgencyName="SAP">30714324817</dutyFeeTaxRegistrationID>
+					<dutyFeeTaxTypeCode>OTH</dutyFeeTaxTypeCode>
+				</dutyFeeTaxRegistration>
+				<dutyFeeTaxRegistration>
+					<dutyFeeTaxRegistrationID identificationSchemeAgencyCode="TaxNumber3" identificationSchemeAgencyName="SAP">9216080346</dutyFeeTaxRegistrationID>
+					<dutyFeeTaxTypeCode>OTH</dutyFeeTaxTypeCode>
+				</dutyFeeTaxRegistration>
+				<organisationDetails>
+					<organisationName>Cortassa S.A.</organisationName>
+					<officialAddress/>
+				</organisationDetails>
+				<financialInstitutionInformation>
+					<address>
+						<city>Rafaela</city>
+						<countryCode>AR</countryCode>
+						<name>Cortassa S.A.|</name>
+						<postalCode>2300</postalCode>
+						<state>12</state>
+						<streetAddressOne>Suipacha 887</streetAddressOne>
+					</address>
+				</financialInstitutionInformation>
+			</buyer>
+			<seller>
+				<gln>9999999999999</gln>
+				<additionalPartyIdentification additionalPartyIdentificationTypeCode="SELLER_ASSIGNED_IDENTIFIER_FOR_A_PARTY">AR13</additionalPartyIdentification>
+				<additionalPartyIdentification additionalPartyIdentificationTypeCode="FOR_INTERNAL_USE_3">Correo Central (1000)</additionalPartyIdentification>
+				<address>
+					<city>Ciudad Autonoma de Buenos Aires</city>
+					<countryCode>AR</countryCode>
+					<languageOfThePartyCode>en</languageOfThePartyCode>
+					<name>Ph.Argentina - General Div. </name>
+					<postalCode>1430</postalCode>
+					<state>00</state>
+					<streetAddressOne>Posta 4789</streetAddressOne>
+				</address>
+				<contact>
+					<communicationChannel>
+						<communicationChannelCode>TELEPHONE</communicationChannelCode>
+						<communicationValue>+54 11 4546 7777</communicationValue>
+					</communicationChannel>
+					<communicationChannel>
+						<communicationChannelCode>EMAIL</communicationChannelCode>
+						<communicationValue>verity.chan@philips.com</communicationValue>
+					</communicationChannel>
+				</contact>
+				<organisationDetails>
+					<organisationName>Ph.Argentina - General Div.</organisationName>
+					<officialAddress/>
+				</organisationDetails>
+			</seller>
+			<shipFrom>
+				<gln>8713381403729</gln>
+				<additionalPartyIdentification additionalPartyIdentificationTypeCode="SELLER_ASSIGNED_IDENTIFIER_FOR_A_PARTY">AR01</additionalPartyIdentification>
+				<address>
+					<city>9 De Abril</city>
+					<countryCode>AR</countryCode>
+					<languageOfThePartyCode>es</languageOfThePartyCode>
+					<name>SP AR01 </name>
+					<postalCode>B1839FSX</postalCode>
+					<state>01</state>
+					<streetAddressOne>Ruta De La Tradicion 7732</streetAddressOne>
+				</address>
+				<contact>
+					<communicationChannel>
+						<communicationChannelCode>TELEPHONE</communicationChannelCode>
+						<communicationValue>54 11 4546 7777</communicationValue>
+					</communicationChannel>
+				</contact>
+				<organisationDetails>
+					<organisationName>SP AR01</organisationName>
+					<officialAddress/>
+				</organisationDetails>
+			</shipFrom>
+			<shipTo>
+				<gln>9999999999999</gln>
+				<additionalPartyIdentification additionalPartyIdentificationTypeCode="SELLER_ASSIGNED_IDENTIFIER_FOR_A_PARTY">0100762749</additionalPartyIdentification>
+				<address>
+					<city>Rafaela</city>
+					<countryCode>AR</countryCode>
+					<languageOfThePartyCode>es</languageOfThePartyCode>
+					<name>Cortassa S.A. </name>
+					<postalCode>2300</postalCode>
+					<state>12</state>
+					<streetAddressOne>Suipacha 887</streetAddressOne>
+				</address>
+				<contact>
+					<communicationChannel>
+						<communicationChannelCode>TELEPHONE</communicationChannelCode>
+						<communicationValue>505700-03492</communicationValue>
+					</communicationChannel>
+				</contact>
+				<dutyFeeTaxRegistration>
+					<dutyFeeTaxRegistrationID identificationSchemeAgencyCode="TaxNumber1" identificationSchemeAgencyName="SAP">30714324817</dutyFeeTaxRegistrationID>
+					<dutyFeeTaxTypeCode>OTH</dutyFeeTaxTypeCode>
+				</dutyFeeTaxRegistration>
+				<dutyFeeTaxRegistration>
+					<dutyFeeTaxRegistrationID identificationSchemeAgencyCode="TaxNumber3" identificationSchemeAgencyName="SAP">9216080346</dutyFeeTaxRegistrationID>
+					<dutyFeeTaxTypeCode>OTH</dutyFeeTaxTypeCode>
+				</dutyFeeTaxRegistration>
+				<organisationDetails>
+					<organisationName>Cortassa S.A.</organisationName>
+					<officialAddress/>
+				</organisationDetails>
+			</shipTo>
+			<inventoryLocation>
+				<additionalPartyIdentification additionalPartyIdentificationTypeCode="SELLER_ASSIGNED_IDENTIFIER_FOR_A_PARTY">AR01</additionalPartyIdentification>
+			</inventoryLocation>
+			<administrativeUnit>
+				<administrativeUnitTypeCode>DIVISION</administrativeUnitTypeCode>
+				<internalAdministrativeUnitIdentification>PH</internalAdministrativeUnitIdentification>
+			</administrativeUnit>
+			<administrativeUnit>
+				<administrativeUnitTypeCode>DISTRIBUTION_CHANNEL</administrativeUnitTypeCode>
+				<internalAdministrativeUnitIdentification>04</internalAdministrativeUnitIdentification>
+			</administrativeUnit>
+			<administrativeUnit>
+				<administrativeUnitTypeCode>SALES_ORGANIZATION</administrativeUnitTypeCode>
+				<internalAdministrativeUnitIdentification>AR13</internalAdministrativeUnitIdentification>
+			</administrativeUnit>
+			<deliveryTerms>
+				<incotermsCode>CIP</incotermsCode>
+				<deliveryTermsLocation>
+					<locationName>Rafaela</locationName>
+				</deliveryTermsLocation>
+			</deliveryTerms>
+			<warehousingDespatchTypeCode>WAREHOUSE_SHIPMENT</warehousingDespatchTypeCode>
+			<plannedDespatch>
+				<logisticEventPeriod>
+					<beginDate>2023-07-07-03:00</beginDate>
+					<beginTime>00:00:00-03:00</beginTime>
+					<endDate>2023-07-07-03:00</endDate>
+					<endTime>00:00:00-03:00</endTime>
+				</logisticEventPeriod>
+			</plannedDespatch>
+			<plannedDelivery>
+				<logisticEventPeriod>
+					<beginDate>2023-07-12-03:00</beginDate>
+					<beginTime>00:00:00-03:00</beginTime>
+					<endDate>2023-07-12-03:00</endDate>
+					<endTime>00:00:00-03:00</endTime>
+				</logisticEventPeriod>
+			</plannedDelivery>
+			<shipmentTransportationInformation>
+				<transportServiceCategoryType>30</transportServiceCategoryType>
+				<transportServiceLevelCode>STANDARD_SERVICE</transportServiceLevelCode>
+				<carrier>
+					<gln>9999999999999</gln>
+				</carrier>
+				<freightForwarder>
+					<gln>9999999999999</gln>
+				</freightForwarder>
+			</shipmentTransportationInformation>
+			<warehousingOutboundInstructionShipmentItem>
+				<lineItemNumber>000010</lineItemNumber>
+				<transactionalTradeItem>
+					<gtin>08710103936428</gtin>
+					<additionalTradeItemIdentification additionalTradeItemIdentificationTypeCode="SUPPLIER_ASSIGNED">000000884638900550</additionalTradeItemIdentification>
+					<additionalTradeItemIdentification additionalTradeItemIdentificationTypeCode="FOR_INTERNAL_USE_1">000000884638900550</additionalTradeItemIdentification>
+					<additionalTradeItemIdentification additionalTradeItemIdentificationTypeCode="FOR_INTERNAL_USE_3">YTAN</additionalTradeItemIdentification>
+					<transactionalItemData>
+						<countryOfOrigin>CN</countryOfOrigin>
+						<tradeItemQuantity measurementUnitCode="H87">20.000</tradeItemQuantity>
+					</transactionalItemData>
+				</transactionalTradeItem>
+				<inventoryLocation>
+					<additionalPartyIdentification additionalPartyIdentificationTypeCode="SELLER_ASSIGNED_IDENTIFIER_FOR_A_PARTY">AR01</additionalPartyIdentification>
+				</inventoryLocation>
+				<inventorySubLocation>
+					<additionalPartyIdentification additionalPartyIdentificationTypeCode="FOR_INTERNAL_USE_1">MAIN</additionalPartyIdentification>
+				</inventorySubLocation>
+				<transactionalReference>
+					<entityIdentification>0320761316</entityIdentification>
+					<lineItemNumber>000010</lineItemNumber>
+					<transactionalReferenceTypeCode>AAJ</transactionalReferenceTypeCode>
+				</transactionalReference>
+				<transactionalReference>
+					<entityIdentification>0116867359</entityIdentification>
+					<lineItemNumber>000010</lineItemNumber>
+					<transactionalReferenceTypeCode>VN</transactionalReferenceTypeCode>
+				</transactionalReference>
+				<transactionalReference>
+					<entityIdentification>9618</entityIdentification>
+					<transactionalReferenceTypeCode>CO</transactionalReferenceTypeCode>
+				</transactionalReference>
+				<transportCargoCharacteristics>
+					<cargoTypeCode>12</cargoTypeCode>
+					<totalGrossVolume measurementUnitCode="DMQ">7.160</totalGrossVolume>
+					<totalGrossWeight measurementUnitCode="KGM">1.520</totalGrossWeight>
+					<totalTransportNetWeight measurementUnitCode="KGM">1.080</totalTransportNetWeight>
+				</transportCargoCharacteristics>
+				<handlingInstruction>
+					<handlingInstructionCode>PIC</handlingInstructionCode>
+					<handlingInstructionText languageCode="en">000000</handlingInstructionText>
+				</handlingInstruction>
+				<plannedDespatchQuantity measurementUnitCode="H87">20.000</plannedDespatchQuantity>
+			</warehousingOutboundInstructionShipmentItem>
+		</warehousingOutboundInstructionShipment>
+	</warehousingOutboundInstruction>
+</ns0:warehousingOutboundInstructionMessage>

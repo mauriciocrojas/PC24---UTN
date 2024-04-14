@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="estilos.css" rel="stylesheet">
+    <title>PP PersFutProf</title>
+</head>
+<body>
+    
+    <div class="divFormDatos">
+        <label>Form Datos</label><br>
+        <label for="optionList" >Filtrar por:</label>
+        <select id="optionList">
+            <option>Todos</option>
+            <option>Futbolistas</option>
+            <option>Profesionales</option>
+        </select>
+        <br>
+        <label for="calcular" >Calcular Edad Promedio:</label>
+        <input type="text" id="tbEdadPromedio" readonly="true" disabled="true">
+        <input type="button" id="btnCalcularEdadPromedio" value="Calcular">
+        <br>
+        <label>Mostrar Columnas:</label>
+        <br>
+        <input type="checkbox" name="a" value="1" checked="true"> ID 
+        <input type="checkbox" name="a" value="2" checked="true"> Nombre 
+        <input type="checkbox" name="a" value="3" checked="true"> Apellido 
+        <input type="checkbox" name="a" value="4" checked="true"> Edad 
+        <input type="checkbox" name="a" value="5" checked="true"> Equipo 
+        <input type="checkbox" name="a" value="6" checked="true"> Posicion 
+        <input type="checkbox" name="a" value="7" checked="true"> CantGoles 
+        <input type="checkbox" name="a" value="8" checked="true"> Titulo 
+        <input type="checkbox" name="a" value="9" checked="true"> Facultad 
+        <input type="checkbox" name="a" value="10" checked="true"> AñoGrad 
+        <br>
+        <table border="1" >
+            <thead id="dataThead">
+
+            </thead>
+            <tbody id="dataTbody">
+            </tbody>
+            
+                    
+        </table>
+        <input id="btnAgregar" type="button" value="Agregar">   
+    </div>
+    <br><br>
+    <div class="divFormAbm">
+        <form class="formAbm" action="" method="post" name = "formAbm">
+            <label>Formulario ABM</label><br>
+            <label for="id">ID: </label><input type="text" id="id"><br>
+            <label for="nombre">Nombre: </label><input type="text" id="nombre"><br>
+            <label for="apellido">Apellido: </label><input type="text" id="apellido"><br>
+            <label for="edad">Edad: </label><input type="text" id="edad"><br>
+            <label for="tipo">Tipo: </label>
+            <select name="" id="tipo">Tipo: 
+                <option>Futbolista</option>
+                <option>Profesional</option>
+            </select>
+            <br>
+            <label for="titulo">Titulo: </label><input type="text" id="titulo"><br>
+            <label for="facultad">Facultad: </label><input type="text" id="facultad"><br>
+            <label for="aniograd">Año Grad: </label><input type="text" id="aniograd"><br>
+            <input id="botonAlta" type="button" value="Alta"> 
+            <input id="botonModificar" type="button" value="Modificar">     
+            <input id="botonEliminar" type="button" value="Eliminar">     
+            <input id="botonCancelar" type="button" value="Cancelar">     
+
+        </form>
+    </div>
+
+    <script src="index.js"></script>
+    <!-- <script src="Persona.js"></script> -->
+
+</body>
+</html>

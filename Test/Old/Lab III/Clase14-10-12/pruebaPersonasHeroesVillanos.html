@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <div id="respuestas"></div>
+</body>
+
+<script>
+    function insertarTexto(texo){
+        let div = document.getElementById("respuestas");
+        let p = document.createElement("p");
+        p.appendChild(document.createTextNode(texo));
+        div.appendChild(p);
+    }
+
+
+
+
+    async function getFetch(){
+        let respuesta = await fetch("http://localhost/personasHeroesVillanos.php",{
+            method:"GET"
+        })
+        let texto = await respuesta.text();
+        insertarTexto("Resultado getFech()");
+        insertarTexto(texto);
+    }
+
+    async function deleteFetch(){
+        let respuesta = await fetch("http://localhost/personasHeroesVillanos.php",{
+            method:"DELETE", 
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body:('{"id":1}')
+        })
+        let texto = await respuesta.text();
+        insertarTexto("Resultado deleteFetch()");
+        insertarTexto(texto);
+    }
+
+    async function putFetch(){
+        let respuesta = await fetch("http://localhost/personasHeroesVillanos.php",{
+            method:"PUT", 
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body:('{"nombre":"Marcelo", "apellido":"Luque", "edad":45, "alterego":"Ingeniero", "ciudad":"UTN", "publicado":2002}')
+        })
+        let texto = await respuesta.text();
+        insertarTexto("Resultado putFetch() Heroe");
+        insertarTexto(texto);
+    }
+
+    async function putFetchFutbolista(){
+        let respuesta = await fetch("http://localhost/personasHeroesVillanos.php",{
+            method:"PUT", 
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body:('{"nombre":"Nicolas", "apellido":"Serrano", "edad":23, "enemigo":"Boca", "robos":5, "asesinatos":0}')
+        })
+        let texto = await respuesta.text();
+        insertarTexto("Resultado putFetch() Villano");
+        insertarTexto(texto);
+    }
+
+    async function postFetch(){
+        let respuesta = await fetch("http://localhost/personasHeroesVillanos.php",{
+            method:"POST", 
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body:('{"id":1, "nombre":"Marcelo", "apellido":"Luque", "edad":45, "alterego":"Ingeniero", "ciudad":"UTN", "publicado":2002}')
+        })
+        let texto = await respuesta.text();
+        insertarTexto("Resultado postFetch() Heroe");
+        insertarTexto(texto);
+    }
+
+    async function postFetchFutbolista(){
+        let respuesta = await fetch("http://localhost/personasHeroesVillanos.php",{
+            method:"POST", 
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body:('{"id":1, "nombre":"Nicolas", "apellido":"Serrano", "edad":23, "enemigo":"Boca", "robos":5, "asesinatos":0}')
+        })
+        let texto = await respuesta.text();
+        insertarTexto("Resultado postFetch() Villano");
+        insertarTexto(texto);
+    }
+
+    async function ejecutarPruebas(){
+        await getFetch();
+        await deleteFetch();
+        await putFetch();
+        await putFetchFutbolista();
+        await postFetch();
+        await postFetchFutbolista();
+    }
+
+    ejecutarPruebas();
+
+
+</script>
+
+
+
+
+
+</html>

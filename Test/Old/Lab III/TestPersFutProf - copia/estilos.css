@@ -1,0 +1,22 @@
+body{
+    background-color: burlywood;
+}
+
+
+.divFormDatos{
+    border: 3px solid;
+    border-color: coral;
+    display: block;
+}
+
+.formAbm{
+    border: 3px solid;
+    border-color: coral;
+    display: none;
+}
+
+
+
+/* table, td, tr{
+    border: 2px solid;
+} */

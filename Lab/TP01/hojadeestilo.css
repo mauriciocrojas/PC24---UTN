@@ -1,0 +1,42 @@
+.bannerInicial {
+    border: 3px solid;
+    border-color: coral;
+    border-radius: 2px;
+    display: block;
+    background-color: burlywood;
+    width: auto;
+    height: auto;
+    text-align: center;
+}
+
+
+.bannerFinal {
+    border: 3px solid;
+    border-color: coral;
+    border-radius: 2px;
+    display: block;
+    background-color: burlywood;
+    width: auto;
+    height: auto;
+    text-align: center;
+}
+
+.titulo {
+    font-weight: bold;
+    /* Texto en negrita */
+    text-align: center;
+    /* Centrado del texto */
+}
+
+.boton {
+    background-color: rgb(214, 121, 0);
+    width: auto;
+    height: auto;
+    color: rgb(255, 255, 255);
+}
+
+.imagen {
+    width: 500px;
+    height: 300px;
+    margin-left: 400px;
+}

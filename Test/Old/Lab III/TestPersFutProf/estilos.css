@@ -1,0 +1,29 @@
+body{
+    background-color: burlywood;
+}
+
+
+.divFormDatos{
+    border: 3px solid;
+    border-color: coral;
+    display: block;
+}
+
+.formAbm{
+    border: 3px solid;
+    border-color: coral;
+    display: none;
+}
+
+
+th{
+    background-color:rgb(196, 134, 255);
+}
+
+tr{
+    background-color: bisque;
+}
+
+.AAA{
+    display: none;
+}

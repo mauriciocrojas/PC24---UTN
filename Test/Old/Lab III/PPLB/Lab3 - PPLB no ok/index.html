@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="estilos.css" rel="stylesheet">
+    <title>PP PersFutProf</title>
+</head>
+<body>
+    
+    <div class="divFormDatos">
+        <label>Form Datos</label><br>
+        <label for="optionList" >Filtrar por:</label>
+        <select id="optionList">
+            <option>Todos</option>
+            <option>Heroes</option>
+            <option>Villanos</option>
+        </select>
+        <br>
+        <label for="calcular" >Calcular Edad Promedio:</label>
+        <input type="text" id="tbEdadPromedio" readonly="true" disabled="true">
+        <input type="button" id="btnCalcularEdadPromedio" value="Calcular">
+        <br>
+        <label>Mostrar Columnas:</label>
+        <br>
+        <input type="checkbox" id="chkId" name="a" value="1" checked="true"> ID 
+        <input type="checkbox" id="chkNombre" name="a" value="2" checked="true"> Nombre 
+        <input type="checkbox" id="chkApellido" name="a" value="3" checked="true"> Apellido 
+        <input type="checkbox" id="chkEdad" name="a" value="4" checked="true"> Edad 
+        <input type="checkbox" id="chkEquipo" name="a" value="5" checked="true"> Alter Ego 
+        <input type="checkbox" id="chkPosicion" name="a" value="6" checked="true"> Ciudad 
+        <input type="checkbox" id="chkCantGoles" name="a" value="7" checked="true"> Publicado 
+        <input type="checkbox" id="chkTitulo" name="a" value="8" checked="true"> Enemigo 
+        <input type="checkbox" id="chkFacultad" name="a" value="9" checked="true"> Robos 
+        <input type="checkbox" id="chlAnioGrad" name="a" value="10" checked="true"> Asesinatos 
+        <br>
+        <table border="1" >
+            <thead id="dataThead">
+
+            </thead>
+            <tbody id="dataTbody">
+                
+            </tbody>
+            
+                    
+        </table>
+        <input id="btnAgregar" type="button" value="Agregar">   
+    </div>
+    <br><br>
+    <div class="divFormAbm">
+        <form class="formAbm" action="" method="post" name = "formAbm">
+            <label>Formulario ABM</label><br>
+            <label for="id">ID: </label><input type="text" id="tbId"><br>
+            <label for="nombre">Nombre: </label><input type="text" id="tbNombre"><br>
+            <label for="apellido">Apellido: </label><input type="text" id="tbApellido"><br>
+            <label for="edad">Edad: </label><input type="text" id="tbEdad"><br>
+            <label for="tipo">Tipo: </label>
+            <select name="" id="selTipo">Tipo: 
+                <option>Heroe</option>
+                <option>Villano</option>
+            </select>
+            <br>
+
+            <label for="alterEgo">AlterEgo: </label><input type="text" id="tbAlterego"><br>
+            <label for="ciudad">Ciudad: </label><input type="text" id="tbCiudad"><br>
+            <label for="publicado">Publicado: </label><input type="text" id="tbPublicado"><br>
+
+            <label for="enemigo">Enemigo: </label><input type="text" id="tbEnemigo"><br>
+            <label for="robos">Robos: </label><input type="text" id="tbRobos"><br>
+            <label for="asesinatos">Asesinatos: </label><input type="text" id="tbAsesinatos"><br>
+
+            <input id="btnAlta" type="button" value="Alta"> 
+            <input id="btnModificar" type="button" value="Modificar">     
+            <input id="btnEliminar" type="button" value="Eliminar">     
+            <input id="btnCancelar" type="button" value="Cancelar">     
+
+        </form>
+    </div>
+
+    <script src="index.js"></script>
+    <!-- <script src="Persona.js"></script> -->
+
+</body>
+</html>
