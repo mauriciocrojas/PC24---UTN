@@ -10,17 +10,17 @@ utilizando las estructuras while y foreach.
 
 echo "<br> Con For: <br><br>";
 
-$contador = 0;
+$numero = 0;
 $impares = array();
-$j = 0;
+$contador = 0;
 
 
-for ($i = 0; $j < 10; $i++) {
-    $contador++;
+for ($i = 0; $contador < 10; $i++) {
+    $numero++;
 
-    if ($contador % 2 != 0) {
-        $j++;
-        $impares[$j] = $contador;
+    if ($numero % 2 != 0) {
+        $contador++;
+        $impares[$contador] = $numero;
     }
 }
 
@@ -33,12 +33,13 @@ echo "<br> Con While: <br><br>";
 
 $contador = 0;
 $impares = array();
-$e = 0;
+$numero = 0;
 
 while ($contador < 10) {
-    if ($e++ % 2 == 0) {
+    $numero++;
+    if ($numero % 2 != 0) {
         $contador++;
-        $impares[] = $e;
+        $impares[] = $numero;
     }
 }
 
