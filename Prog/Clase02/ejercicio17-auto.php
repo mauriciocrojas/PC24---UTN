@@ -4,10 +4,10 @@
 class Auto
 {
 
-    private $_color;
-    private $_precio;
-    private $_marca;
-    private $_fecha;
+    public $_color;
+    public $_precio;
+    public $_marca;
+    public $_fecha;
 
 
     public function getPrecio(){
