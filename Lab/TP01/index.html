@@ -5,24 +5,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="hojadeestilo.css" rel="stylesheet">
-    <title>La Cocina de Juan</title>
+    <title>La Maderera de Juan</title>
+</head>
+
+<body>
+
     <div class="bannerInicial">
-        <input class="boton" type="button" name="Home" value="Home">
-        <input class="boton" type="button" name="AcercaDe" value="Acerca De">
-        <input class="boton" type="button" name="Contacto" value="Contacto">
-        <h1 class="titulo">La Cocina de Juan</h1>
+        <button class="boton"><a href="index.html">Home</a></button>
+        <button class="boton"><a href="acercaDe.html">Acerca De</a></button>
+        <button class="boton"><a href="contacto.html">Contacto</a></button>
+
+        <h1 class="titulo">Esperamos que les gusten nuestras tablas, platos y bandejas de madera.</h1>
     </div>
-    <h3>Sopa Crema de Calabaza</h3>
-    <img class="imagen" src="img/SopaCalabaza.jpg">
+    <h3>Nuestros productos:</h3>
+    <img class="imagen" src="img/Madera.jpg">
     <br>
-    <input class="boton" type="button" name="Receta" value="Receta">
+    <h3>Descripcion</h3>
+    <!-- <input class="boton" type="button" id="btnDescripcionMostrar" value="Mostrar"> -->
+
+    <button class="boton" id="btnDescripcionMostrar">Mostrar</a></button>
+    <button class="boton" id="btnDescripcionOcultar">Ocultar</a></button>
+    <p class="descripciones"> Maderas finamente seleccionadas </p>
+
     <br><br>
     <div class="bannerFinal">
         <h3> Todos los derechos reservados 2024 ©</h3>
     </div>
-</head>
-
-<body>
+    <script src="index.js"></script>
 
 </body>
 

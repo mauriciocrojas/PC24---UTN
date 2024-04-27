@@ -40,3 +40,13 @@
     height: 300px;
     margin-left: 400px;
 }
+
+.descripciones {
+    text-align: center;
+    display: none;
+}
+
+.descripciones2 {
+    text-align: center;
+    display: block;
+}
