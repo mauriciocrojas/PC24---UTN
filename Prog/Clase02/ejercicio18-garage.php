@@ -14,14 +14,11 @@ class Garage
 
     // Realizar un método de instancia llamado “MostrarGarage”, que no recibirá parámetros y
     // que mostrará todos los atributos del objeto.
-
     // Crear el método de instancia “Equals” que permita comparar al objeto de tipo Garaje con un
     // objeto de tipo Auto. Sólo devolverá TRUE si el auto está en el garaje.
-
     // Crear el método de instancia “Add” para que permita sumar un objeto “Auto” al “Garage”
     // (sólo si el auto no está en el garaje, de lo contrario informarlo).
     // Ejemplo: $miGarage->Add($autoUno);
-
     // Crear el método de instancia “Remove” para que permita quitar un objeto “Auto” del
     // “Garage” (sólo si el auto está en el garaje, de lo contrario informarlo). Ejemplo:
     // $miGarage->Remove($autoUno);
@@ -74,9 +71,24 @@ class Garage
     public function Add(Auto $autoPasado)
     {
         if ($this->Equals($autoPasado)) {
-            return "Se agregó el auto al garage <br>";
+            return "No se pudo agregar el auto al garage ya que el mismo ya se encontraba guardado<br><br>";
         } else {
-            return "No se pudo agregar el auto al garage ya que el mismo ya se encontraba guardado<br>";
+            array_push($this->_autos, $autoPasado);
+            return "Se agregó el auto al garage <br><br>";
+        }
+    }
+
+    // Crear el método de instancia “Remove” para que permita quitar un objeto “Auto” del
+    // “Garage” (sólo si el auto está en el garaje, de lo contrario informarlo). Ejemplo:
+    // $miGarage->Remove($autoUno);
+    public function Remove(Auto $autoPasado)
+    {
+        if ($this->Equals($autoPasado)) {
+            $indice = array_search($autoPasado, $this->_autos);
+            array_splice( $this->_autos, $indice,1);
+            return "Se eliminó el auto del garage<br><br>";
+        } else {
+            return "No se pudo eliminar el auto del garage ya que el mismo no se encontraba estacionado<br><br>";
         }
     }
 }

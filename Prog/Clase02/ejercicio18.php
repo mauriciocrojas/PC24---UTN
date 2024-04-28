@@ -49,3 +49,17 @@ echo $garage->Add($auto02);
 //Muestro el garage con el auto02 agregado
 echo "Muestro el garage luego del agregado del auto02:<br>";
 echo $garage->MostrarGarage();
+
+
+//Intento eliminar el auto01 del garage
+echo "Intento eliminar el auto01 del garage:<br>";
+echo $garage->Remove($auto01);
+
+
+//Intento eliminar el auto02 del garage
+echo "Intento eliminar el auto02 del garage:<br>";
+echo $garage->Remove($auto02);
+
+//Intento eliminar el auto01 nuevamente del garage
+echo "Intento eliminar el auto01 nuevamente del garage:<br>";
+echo $garage->Remove($auto01);
