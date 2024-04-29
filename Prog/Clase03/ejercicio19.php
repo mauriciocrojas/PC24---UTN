@@ -1,6 +1,7 @@
 <?php
 
 require_once "ejercicio19-auto.php";
+// Alumno: Mauricio Rojas
 // Parte 5 - Ejercicios con POO + Archivos
 // Aplicación No 19 (Auto)
 
