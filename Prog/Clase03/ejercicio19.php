@@ -75,7 +75,7 @@ echo Auto::AltaAutoArray($autos) ? "Alta exitosa<br><br>" : "No se pudo dar de a
 
 
 
-//Leo los archivos previamente generado
+//Leo los archivos previamente generados
 echo "Leo archivo csv indivual:<br>";
 Auto::LeerArchivo("ejercicio19-autoIndividual.csv");
 
