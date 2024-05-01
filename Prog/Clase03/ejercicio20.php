@@ -1,6 +1,7 @@
 <?php
 
 require_once "ejercicio20-garage.php";
+// Alumno: Mauricio Rojas
 // Aplicación No 20 (Auto - Garage)
 // Crear la clase Garage que posea como atributos privados:
 
@@ -35,7 +36,7 @@ $auto02 = new Auto("Ford", "Blanco", 2100);
 $auto03 = new Auto("Ford", "Negro", 1500);
 $auto04 = new Auto("Toyota", "Amarillo", 2400);
 
-$garage->MostrarGarage();
+echo $garage->MostrarGarage();
 
 echo $garage->Equals($auto01) ?  "El auto se encuentra en el garage<br>" :  "El auto no se encuentra en el garage<br>";
 
@@ -44,3 +45,7 @@ echo $garage->Add($auto01) ? "Se agregó el auto al garage<br>" : "El auto ya se
 
 echo $garage->Remove($auto01) ? "Se eliminó el auto del garage<br>" : "El auto no se encuentra en el garage<br>";
 echo $garage->Remove($auto01) ? "Se eliminó el auto del garage<br>" : "El auto no se encuentra en el garage<br>";
+
+Garage::AltaGarage("Miguelitos", 3000);
+
+Garage::LeerGarage("ejercicio20-garage.csv");

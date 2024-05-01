@@ -41,15 +41,16 @@ class Garage
 
     public function MostrarGarage()
     {
-        echo "Razon social: " . $this->_razonSocial . "<br>" .
+        $cadena = "Razon social: " . $this->_razonSocial . "<br>" .
             "Precio por hora: $" . $this->_precioPorHora . "<br><br>";
-        echo "Autos estacionados dentro del garage:<br>";
+        $cadena .= "Autos estacionados dentro del garage:<br>";
         foreach ($this->_autos as $valor) {
-            echo "Marca: " . $valor->GetMarca() . "<br>" .
+            $cadena .= "Marca: " . $valor->GetMarca() . "<br>" .
                 "Precio: $" . $valor->getPrecio() . "<br>" .
                 "Color: " . $valor->GetColor() . "<br>" .
                 "Fecha: " . $valor->GetFecha() . "<br><br>";
         }
+        return $cadena;
     }
     public function Equals($autoPasado)
     {
@@ -61,22 +62,45 @@ class Garage
         return false;
     }
 
-    public function Add($auto){
-        if(!$this->Equals($auto)){
+    public function Add($auto)
+    {
+        if (!$this->Equals($auto)) {
             array_push($this->_autos, $auto);
             return true;
-        }else{
+        } else {
             return false;
         }
     }
 
-    public function Remove($auto){
-        if($this->Equals($auto)){
-            $indice = array_search($auto,$this->_autos);
-            array_splice($this->_autos,$indice,1);
+    public function Remove($auto)
+    {
+        if ($this->Equals($auto)) {
+            $indice = array_search($auto, $this->_autos);
+            array_splice($this->_autos, $indice, 1);
             return true;
-        }else{
+        } else {
             return false;
         }
+    }
+
+    public static function AltaGarage($nombre, $precioPorHora)
+    {
+        $garage = new Garage($nombre, $precioPorHora);
+        $archivo = fopen("ejercicio20-garage.csv", "w");
+        if ($archivo) {
+            fwrite($archivo, $garage->MostrarGarage());
+        }
+        fclose($archivo);
+    }
+
+    public static function LeerGarage($path)
+    {
+        $archivo = fopen($path, "r");
+        if ($archivo) {
+            if (!feof($archivo)) {
+                echo fgets($archivo);
+            }
+        }
+        fclose($archivo);
     }
 }
