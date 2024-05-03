@@ -22,11 +22,11 @@ class Usuario
     public function ValidarUsuario(Usuario $usuario)
     {
         if ($this->usuario == $usuario->usuario && $this->clave == $usuario->clave && $this->mail == $usuario->mail) {
-            return "Verificado/n";
+            return "Verificado"."\n";
         } else if ($this->usuario == $usuario->usuario && $this->clave != $usuario->clave && $this->mail == $usuario->mail) {
-            return "Error en los datos/n";
+            return "Error en los datos"."\n";
         } else if ($this->usuario == $usuario->usuario && $this->clave == $usuario->clave && $this->mail != $usuario->mail) {
-            return "Usuario no registrado, no coincide el mail/n";
+            return "Usuario no registrado, no coincide el mail"."\n";
         }
     }
 }
