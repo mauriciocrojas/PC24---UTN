@@ -14,3 +14,27 @@
 // <li>Milk</li>
 // </ul>
 // Hacer los métodos necesarios en la clase usuario
+
+
+require_once "ejercicio21-usuario.php";
+
+$nombre = $_GET["usuario"];
+$clave = $_GET["clave"];
+$mail = $_GET["mail"];
+
+
+$usuario01 = new Usuario("Mau", "TopSecret", "mau@gmail.com");
+$usuario02 = new Usuario($nombre, $clave, $mail);
+
+$lista = array();
+
+array_push($lista, $usuario01);
+array_push($lista, $usuario02);
+
+foreach ($lista as $usuario) {
+    echo (Usuario::MostrarUsuario($usuario));
+}
+
+
+// var_dump($lista);
+// var_dump($_GET);
