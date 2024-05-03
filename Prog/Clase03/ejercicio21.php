@@ -1,4 +1,6 @@
 <?php
+// Alumno: Mauricio Rojas
+// Validar
 // Aplicación No 21 ( Listado CSV y array de usuarios)
 // Archivo: listado.php
 // método:GET

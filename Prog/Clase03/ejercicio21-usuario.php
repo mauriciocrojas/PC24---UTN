@@ -38,13 +38,4 @@ class Usuario {
     public static function MostrarUsuario($usuario){
         return "Nombre: ". $usuario->_nombre . ", Clave: ". $usuario->_clave . ", Mail: ". $usuario->_mail."<br>";
     }
-
-    public static function GenerarArray($usuario){
-        $usuarios = array();
-        array_push($usuarios, $usuario);
-        return $usuarios;
-    }
 }
-
-
-?>
