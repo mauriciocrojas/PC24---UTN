@@ -8,9 +8,9 @@ class Usuario
     public $mail;
     public $fechaRegistro;
 
-    public function __construct($Id, $nombre, $clave, $mail, $fechaRegistro)
+    public function __construct($nombre, $clave, $mail, $fechaRegistro = 'Sin especificar')
     {
-        $this->Id = $Id;
+        $this->Id = Usuario::IdIncremental();
         $this->nombre = $nombre;
         $this->clave = $clave;
         $this->mail = $mail;

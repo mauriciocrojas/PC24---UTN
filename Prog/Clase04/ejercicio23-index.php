@@ -18,7 +18,7 @@ $nombre = $_POST["nombre"];
 $clave = $_POST["clave"];
 $mail = $_POST["mail"];
 
-$usuario = new Usuario(Usuario::IdIncremental(),$nombre, $clave, $mail, date('d-m-y'));
+$usuario = new Usuario($nombre, $clave, $mail);
 
 echo Usuario::MostrarUsuario($usuario);
 
