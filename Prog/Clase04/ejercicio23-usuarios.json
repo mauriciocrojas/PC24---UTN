@@ -1,0 +1,16 @@
+[
+    {
+        "Id": 8071,
+        "nombre": "Mau",
+        "clave": "TopSecret",
+        "mail": "mau@gmail.com",
+        "fechaRegistro": "08-05-24 22:06:14"
+    },
+    {
+        "Id": 9494,
+        "nombre": "NoName",
+        "clave": "Nono",
+        "mail": "Nn@gmail.com",
+        "fechaRegistro": "08-05-24 22:06:14"
+    }
+]

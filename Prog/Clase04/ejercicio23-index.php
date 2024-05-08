@@ -11,14 +11,16 @@ require_once "ejercicio23-usuario.php";
 // el alta, guardando los datos en usuarios.json y subir la imagen al servidor en la carpeta
 // Usuario/Fotos/.
 // retorna si se pudo agregar o no.
-// Cada usuario se agrega en un renglón diferente al anterior.
 // Hacer los métodos necesarios en la clase usuario.
 
 $nombre = $_POST["nombre"];
 $clave = $_POST["clave"];
 $mail = $_POST["mail"];
+$archivo = $_FILE["img"];
 
-$usuario = new Usuario($nombre, $clave, $mail);
+$usuario1 = new Usuario($nombre, $clave, $mail);
+$usuario2 = new Usuario("NoName", "Nono", "Nn@gmail.com");
 
-echo Usuario::MostrarUsuario($usuario);
+$usuarios = array($usuario1, $usuario2);
 
+echo Usuario::AltaUsuarioEnArchivo($usuarios);
