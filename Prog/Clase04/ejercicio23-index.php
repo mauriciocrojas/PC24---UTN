@@ -30,3 +30,4 @@ $locationTemp = $_FILES["file"]["tmp_name"];
 $sizeFile = $_FILES["file"]["size"];
 
 echo Usuario::GuardarArchivo($nameFile, $locationTemp);
+
