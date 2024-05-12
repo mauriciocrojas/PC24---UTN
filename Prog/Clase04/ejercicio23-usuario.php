@@ -23,26 +23,33 @@ class Usuario
         return rand(1, 10000);
     }
 
-    public static function MostrarUsuario($usuario)
+    public static function AltaUsuarioEnArchivo($usuario)
     {
-        $cadena = "Id: " . $usuario->Id .
-            ", Nombre: " . $usuario->nombre .
-            ", Clave: " . $usuario->clave .
-            ", Mail: " . $usuario->mail .
-            ", Fecha de registro: " . $usuario->fechaRegistro;
-
-            return $cadena;
-    }
-
-    public static function AltaUsuarioEnArchivo($usuario){
         $archivo = fopen("ejercicio23-usuarios.json", "a+");
-        if($archivo){
-            if(file_put_contents("ejercicio23-usuarios.json" , json_encode($usuario, JSON_PRETTY_PRINT))){
+        if ($archivo) {
+            if (file_put_contents("ejercicio23-usuarios.json", json_encode($usuario, JSON_PRETTY_PRINT))) {
                 echo "Datos guardados correctamente en el archivo JSON.";
             } else {
                 echo "Error al guardar los datos en el archivo JSON.";
             }
         }
         fclose($archivo);
+    }
+
+    public static function GuardarArchivo($fileName, $tempLocation)
+    {
+        if (isset($fileName, $tempLocation)) {
+            $folderName = "Ejercicio23-UsuarioArchivos/";
+            $path =  $folderName . $fileName;
+
+            //Si la carpeta no está creada, la crea. Si ya existe, salte el if
+            if (!is_dir($folderName)) {
+                mkdir($folderName, 0777);
+            }
+
+            echo move_uploaded_file($tempLocation, $path) ? "Se guardó el archivo" : "No se pudo guardar el archivo";
+        } else {
+            echo "El nombre del archivo o la ubicación temporal no están seteadas";
+        }
     }
 }

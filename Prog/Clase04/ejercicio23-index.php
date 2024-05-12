@@ -16,7 +16,6 @@ require_once "ejercicio23-usuario.php";
 $nombre = $_POST["nombre"];
 $clave = $_POST["clave"];
 $mail = $_POST["mail"];
-$archivo = $_FILES["archivo"];
 
 $usuario1 = new Usuario($nombre, $clave, $mail);
 $usuario2 = new Usuario("NoName", "Nono", "Nn@gmail.com");
@@ -25,19 +24,8 @@ $usuarios = array($usuario1, $usuario2);
 
 echo Usuario::AltaUsuarioEnArchivo($usuarios);
 
+$nameFile = $_FILES["file"]["name"];
+$locationTemp = $_FILES["file"]["tmp_name"];
+$sizeFile = $_FILES["file"]["size"];
 
-
-// Comprueba si se ha subido un archivo
-if(isset($archivo)){
-    $archivoNombre = $_FILES['archivo']['name'];
-    $archivoTemporal = $_FILES['archivo']['tmp_name'];
-    
-    $destino = "UsuarioFotos/" . $archivoNombre; // Define la carpeta donde quieres guardar los archivos
-    
-    // Mueve el archivo temporal al directorio de destino
-    if(move_uploaded_file($archivoTemporal, $destino)){
-        echo "Archivo subido correctamente.";
-    } else {
-        echo "Error al subir el archivo.";
-    }
-}
+echo Usuario::GuardarArchivo($nameFile, $locationTemp);
