@@ -42,7 +42,7 @@ class Usuario
             $folderName = "Ejercicio23-UsuarioArchivos/";
             $path =  $folderName . $fileName;
 
-            //Si la carpeta no está creada, la crea. Si ya existe, salte el if
+            //Si la carpeta no está creada, la crea. Si ya existe, saltea el if
             if (!is_dir($folderName)) {
                 mkdir($folderName, 0777);
             }
