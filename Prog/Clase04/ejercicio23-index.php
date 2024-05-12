@@ -1,6 +1,7 @@
 <?php
 
 require_once "ejercicio23-usuario.php";
+// Alumno: Mauricio Rojas
 // Aplicación No 23 (Registro JSON)
 // Archivo: registro.php
 // método:POST
