@@ -1,0 +1,18 @@
+[
+    {
+        "id": 142,
+        "codigoDeBarras": "11111111",
+        "nombre": "Tarta",
+        "tipo": "Jamon",
+        "stock": 10,
+        "precio": 5
+    },
+    {
+        "id": 782,
+        "codigoDeBarras": "11111112",
+        "nombre": "Tarta",
+        "tipo": "Verdura",
+        "stock": 20,
+        "precio": 5
+    }
+]
