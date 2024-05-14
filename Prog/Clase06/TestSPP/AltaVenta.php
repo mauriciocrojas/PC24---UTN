@@ -24,16 +24,16 @@ class AltaVenta{
         
     }
 
-    //Chequear
+    //Chequear (sin terminar)
     public static function SearchIceCreamForUser($saborUsuario, $tipoUsuario, $cantidadSolicitada, $helados)
     {
         $cadena = '';
         foreach ($helados as $helado) {
             if ($helado["sabor"] == $saborUsuario && $helado["tipo"] = $tipoUsuario && $helado["stock"] >= $cantidadSolicitada) {
-                $helado
+                $cadena = "Vendido";
                 break;
             } else {
-                $cadena = "No existe un helado de este tipo o sabor\n";
+                $cadena = "No existe un helado de este tipo o sabor, o no hay stock\n";
             }
         }
         echo $cadena;
