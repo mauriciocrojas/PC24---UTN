@@ -17,6 +17,14 @@ switch ($metodo) {
             case "venta":
                 include "altaVenta.php";
                 break;
+            default:
+                echo "Acción por POST inválida\n";
+                break;
         }
+    case "GET":
+        include "consultarVentas.php";
+        break;
+    default:
+        echo "El método pasado no es válido\n";
         break;
 }

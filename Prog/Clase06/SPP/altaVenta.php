@@ -15,7 +15,7 @@ if (isset($_POST["sabor"]) && isset($_POST["tipo"]) && isset($_POST["cantidad"])
 
 
     if (Venta::BuscarHeladoParaUsuario($sabor, $tipo, $cantidad)) {
-        $usuario = Venta::AltaUsuarioVenta($email, $sabor, $tipo, $cantidad);
+        $usuario = Venta::AltaUsuarioVenta($email, $sabor, $tipo, $cantidad, $vaso);
         echo Helado::GuardarJson($usuario, "ventas.json") ? "Se guardó el listado de ventas\n" : "Error al guardar listado de ventas\n";
 
         $ubicacionTemp = $_FILES["file"]["tmp_name"];

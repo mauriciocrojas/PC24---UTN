@@ -16,6 +16,8 @@ class Venta
     public $cantidadSolicitada;
     public $fecha;
 
+    public $vaso;
+
     public function SetEmail($email)
     {
         if (isset($email) && is_string($email)) {
@@ -32,6 +34,13 @@ class Venta
     {
         if (isset($tipo) && is_string($tipo)) {
             $this->tipo = $tipo;
+        }
+    }
+
+    public function SetVaso($vaso)
+    {
+        if (isset($vaso) && is_string($vaso)) {
+            $this->vaso = $vaso;
         }
     }
     public function SetCantidadSolicitada($cantidadSolicitada)
@@ -54,7 +63,7 @@ class Venta
             $this->numeroVenta = $numeroVenta;
         }
     }
-    public static function AltaUsuarioVenta($email, $sabor, $tipo, $cantidadSolicitada)
+    public static function AltaUsuarioVenta($email, $sabor, $tipo, $cantidadSolicitada, $vaso)
     {
         $listaVentas = array();
 
@@ -62,11 +71,12 @@ class Venta
 
         $venta = new Venta();
         $venta->SetEmail($email);
+        $venta->SetVaso($vaso);
         $venta->SetSabor($sabor);
         $venta->SetTipo($tipo);
         $venta->SetCantidadSolicitada($cantidadSolicitada);
         $venta->SetId(count($listaVentas) + 1);
-        $venta->SetNumeroVenta(rand(1000,5000));
+        $venta->SetNumeroVenta(rand(1000, 5000));
         $venta->fecha = date("d-m-Y H:i:s");
 
         array_push($listaVentas, $venta);
@@ -124,4 +134,123 @@ class Venta
         }
     }
 
+
+
+    public static function HeladosVendidoPorDia($fecha = "19-05-2024")
+    {
+
+        $listaVentas = array();
+
+        $listaVentas = Helado::ObtenerContenidoDelArchivo("ventas.json");
+        $cantidad = 0;
+
+        foreach ($listaVentas as $venta) {
+            if (explode(" ", $venta["fecha"])[0] == $fecha) {
+                $cantidad += $venta["cantidadSolicitada"];
+            }
+        }
+        return $cantidad;
+    }
+
+    public static function HeladosVendidosPorUsuario($usuario)
+    {
+
+        $listaVentas = array();
+
+        $listaVentas = Helado::ObtenerContenidoDelArchivo("ventas.json");
+
+        $listaUsuarios = array();
+
+        foreach ($listaVentas as $venta) {
+            if ($venta["email"] == $usuario) {
+                array_push($listaUsuarios, $venta);
+            }
+        }
+        return $listaUsuarios;
+    }
+
+    
+    public static function HeladosVendidosPorSabor($sabor)
+    {
+
+        $listaVentas = array();
+
+        $listaVentas = Helado::ObtenerContenidoDelArchivo("ventas.json");
+
+        $listaVentasPorSabor = array();
+
+        foreach ($listaVentas as $venta) {
+            if ($venta["sabor"] == $sabor) {
+                array_push($listaVentasPorSabor, $venta);
+            }
+        }
+
+        if (Venta::MostrarVentas($listaVentasPorSabor) === false) {
+            echo "No existen ventas de ese sabor de helado\n";
+        }
+    }
+
+    public static function HeladosVendidoTipoCucurucho()
+    {
+
+        $listaVentas = array();
+
+        $listaVentas = Helado::ObtenerContenidoDelArchivo("ventas.json");
+
+        $listaVentasPorSabor = array();
+
+        foreach ($listaVentas as $venta) {
+            if ($venta["vaso"] == "cucurucho") {
+                array_push($listaVentasPorSabor, $venta);
+            }
+        }
+
+        if (Venta::MostrarVentas($listaVentasPorSabor) === false) {
+            echo "No existen ventas de cucuruchos\n";
+        }
+    }
+
+    public static function MostrarVentas($listaDeVentas)
+    {
+        if (!empty($listaDeVentas)) {
+            foreach ($listaDeVentas as $venta) {
+                echo "\nUsuario: " . $venta["email"] .
+                    " \nSabor: " . $venta["sabor"] .
+                    " \nTipo: " . $venta["tipo"] .
+                    " \nCantidad adquirada: " . $venta["cantidadSolicitada"] . "\n\n";
+            }
+        } else {
+            echo "\nLista Vacía\n";
+            return false;
+        }
+    }
+
+
+    public static function MostrarVentasEntreFechas($fecha01, $fecha02)
+    {
+        $listaVentas = array();
+
+        $listaVentas = Helado::ObtenerContenidoDelArchivo("ventas.json");
+
+        $listaVentasEntreFechas = array();
+
+        foreach ($listaVentas as $venta) {
+            if (
+                explode(" ", $venta["fecha"])[0] >= $fecha01 &&
+                explode(" ", $venta["fecha"])[0] <= $fecha02
+            ) {
+                array_push($listaVentasEntreFechas, $venta);
+            }
+        }
+
+
+        usort($listaVentasEntreFechas, function($sabor01, $sabor02){
+                return strcmp($sabor01["sabor"], $sabor02["sabor"]);
+
+        });
+
+        if (Venta::MostrarVentas($listaVentasEntreFechas) === false) {
+            echo "No existen ventas dentro de este rango de fechas\n";
+        }
+    }
 }

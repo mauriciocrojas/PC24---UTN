@@ -1,65 +1,52 @@
 [
     {
         "id": 1,
-        "numeroVenta": 4897,
+        "numeroVenta": 1232,
         "email": "usuario@gmail.com",
         "sabor": "vainilla",
         "tipo": "agua",
         "cantidadSolicitada": "1",
-        "fecha": "20-05-2024 00:25:14"
+        "fecha": "20-05-2024 18:01:16",
+        "vaso": "cucurucho"
     },
     {
         "id": 2,
-        "numeroVenta": 1824,
+        "numeroVenta": 4343,
         "email": "usuario@gmail.com",
         "sabor": "vainilla",
         "tipo": "agua",
         "cantidadSolicitada": "1",
-        "fecha": "20-05-2024 00:25:17"
+        "fecha": "20-05-2024 18:01:30",
+        "vaso": "cucurucho"
     },
     {
         "id": 3,
-        "numeroVenta": 3744,
+        "numeroVenta": 2866,
         "email": "usuario@gmail.com",
-        "sabor": "vainilla",
+        "sabor": "chocolate",
         "tipo": "agua",
         "cantidadSolicitada": "1",
-        "fecha": "20-05-2024 00:32:34"
+        "fecha": "20-05-2024 18:01:37",
+        "vaso": "cucurucho"
     },
     {
         "id": 4,
-        "numeroVenta": 2957,
+        "numeroVenta": 1429,
         "email": "usuario@gmail.com",
-        "sabor": "vainilla",
+        "sabor": "chocolate",
         "tipo": "agua",
         "cantidadSolicitada": "1",
-        "fecha": "20-05-2024 00:33:00"
+        "fecha": "20-05-2024 18:01:39",
+        "vaso": "cucurucho"
     },
     {
         "id": 5,
-        "numeroVenta": 3872,
+        "numeroVenta": 2994,
         "email": "usuario@gmail.com",
-        "sabor": "vainilla",
+        "sabor": "chocolate",
         "tipo": "agua",
         "cantidadSolicitada": "1",
-        "fecha": "20-05-2024 00:33:11"
-    },
-    {
-        "id": 6,
-        "numeroVenta": 2902,
-        "email": "usuario@gmail.com",
-        "sabor": "vainilla",
-        "tipo": "agua",
-        "cantidadSolicitada": "1",
-        "fecha": "20-05-2024 00:36:11"
-    },
-    {
-        "id": 7,
-        "numeroVenta": 2766,
-        "email": "usuario@gmail.com",
-        "sabor": "vainilla",
-        "tipo": "agua",
-        "cantidadSolicitada": "1",
-        "fecha": "20-05-2024 00:41:39"
+        "fecha": "20-05-2024 18:01:43",
+        "vaso": "cucurucho"
     }
 ]
