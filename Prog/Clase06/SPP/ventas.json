@@ -1,0 +1,65 @@
+[
+    {
+        "id": 1,
+        "numeroVenta": 4897,
+        "email": "usuario@gmail.com",
+        "sabor": "vainilla",
+        "tipo": "agua",
+        "cantidadSolicitada": "1",
+        "fecha": "20-05-2024 00:25:14"
+    },
+    {
+        "id": 2,
+        "numeroVenta": 1824,
+        "email": "usuario@gmail.com",
+        "sabor": "vainilla",
+        "tipo": "agua",
+        "cantidadSolicitada": "1",
+        "fecha": "20-05-2024 00:25:17"
+    },
+    {
+        "id": 3,
+        "numeroVenta": 3744,
+        "email": "usuario@gmail.com",
+        "sabor": "vainilla",
+        "tipo": "agua",
+        "cantidadSolicitada": "1",
+        "fecha": "20-05-2024 00:32:34"
+    },
+    {
+        "id": 4,
+        "numeroVenta": 2957,
+        "email": "usuario@gmail.com",
+        "sabor": "vainilla",
+        "tipo": "agua",
+        "cantidadSolicitada": "1",
+        "fecha": "20-05-2024 00:33:00"
+    },
+    {
+        "id": 5,
+        "numeroVenta": 3872,
+        "email": "usuario@gmail.com",
+        "sabor": "vainilla",
+        "tipo": "agua",
+        "cantidadSolicitada": "1",
+        "fecha": "20-05-2024 00:33:11"
+    },
+    {
+        "id": 6,
+        "numeroVenta": 2902,
+        "email": "usuario@gmail.com",
+        "sabor": "vainilla",
+        "tipo": "agua",
+        "cantidadSolicitada": "1",
+        "fecha": "20-05-2024 00:36:11"
+    },
+    {
+        "id": 7,
+        "numeroVenta": 2766,
+        "email": "usuario@gmail.com",
+        "sabor": "vainilla",
+        "tipo": "agua",
+        "cantidadSolicitada": "1",
+        "fecha": "20-05-2024 00:41:39"
+    }
+]

@@ -1,0 +1,18 @@
+[
+    {
+        "id": 1,
+        "sabor": "chocolate",
+        "tipo": "agua",
+        "precio": 10,
+        "stock": 10,
+        "vaso": "cucurucho"
+    },
+    {
+        "id": 2,
+        "sabor": "vainilla",
+        "tipo": "agua",
+        "precio": 10,
+        "stock": 18,
+        "vaso": "cucurucho"
+    }
+]
