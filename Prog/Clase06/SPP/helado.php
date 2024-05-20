@@ -12,39 +12,6 @@ class Helado
     public $vaso;
 
 
-    public function getId()
-    {
-        return $this->id;
-    }
-
-
-    public function getSabor()
-    {
-        return $this->sabor;
-    }
-
-
-    public function getTipo()
-    {
-        return $this->tipo;
-    }
-
-    public function getPrecio()
-    {
-        return $this->precio;
-    }
-
-
-    public function getStock()
-    {
-        return $this->stock;
-    }
-
-    public function getVaso()
-    {
-        return $this->vaso;
-    }
-
     public function setVaso($vaso)
     {
         if (isset($vaso) && is_string($vaso)) {
