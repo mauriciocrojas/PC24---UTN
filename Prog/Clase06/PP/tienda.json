@@ -15,6 +15,15 @@
         "color": "negro",
         "talla": "s",
         "precio": 300,
-        "stock": 9
+        "stock": 19
+    },
+    {
+        "id": 3,
+        "nombre": "jeanAzula",
+        "tipo": "pantalon",
+        "color": "negro",
+        "talla": "s",
+        "precio": 300,
+        "stock": 10
     }
 ]

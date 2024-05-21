@@ -62,21 +62,11 @@
     {
         "id": 7,
         "email": "juanperez@gmail.com",
-        "nombre": "mom",
-        "tipo": "pantalon",
-        "numeroVenta": 4792,
-        "cantidadSolicitada": "1",
-        "fecha": "20-05-2024 19:59:50",
-        "talla": "s"
-    },
-    {
-        "id": 8,
-        "email": "juanperez@gmail.com",
         "nombre": "jeanAzul",
         "tipo": "pantalon",
-        "numeroVenta": 4435,
+        "numeroVenta": 2045,
         "cantidadSolicitada": "1",
-        "fecha": "20-05-2024 21:04:53",
+        "fecha": "20-05-2024 23:03:03",
         "talla": "s"
     }
 ]
